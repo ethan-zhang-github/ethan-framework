@@ -4,7 +4,8 @@ import lombok.*;
 import org.ethan.framework.extension.enums.Client;
 
 /**
- * 某一唯一业务场景
+ * 业务场景标识
+ * @author Ethan Zhang
  */
 @AllArgsConstructor
 @NoArgsConstructor

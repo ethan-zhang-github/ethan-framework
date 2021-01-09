@@ -11,10 +11,6 @@ import java.util.Objects;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-/**
- * 扩展点注册表简单实现
- * @author Ethan Zhang
- */
 @Getter
 @Setter
 public class SimpleExtensionRegistry implements ExtensionRegistry {
