@@ -15,14 +15,80 @@
     <licenses>
         <license>
             <name>GNU Lesser General Public License v2.1</name>
-            <url>https://github.com/alibaba/COLA/blob/master/LICENSE</url>
+            <url>https://github.com/JUST1984/ethan-framework/blob/main/LICENSE</url>
             <distribution>repo</distribution>
         </license>
     </licenses>
 
+    <scm>
+        <connection>scm:git:https://github.com/JUST1984/ethan-framework.git</connection>
+        <developerConnection>scm:git:https://github.com/JUST1984/ethan-framework.git</developerConnection>
+        <url>https://github.com/JUST1984/ethan-framework</url>
+    </scm>
+
+    <issueManagement>
+        <url>https://github.com/JUST1984/ethan-framework/issues</url>
+        <system>GitHub Issues</system>
+    </issueManagement>
+
+    <developers>
+        <developer>
+            <id>JUST1984</id>
+            <name>Ethan Zhang</name>
+            <email>yixiezi1994@gmail.com</email>
+            <roles>
+                <role>Developer</role>
+            </roles>
+            <timezone>+8</timezone>
+            <url>https://github.com/JUST1984</url>
+        </developer>
+    </developers>
+
+    <properties>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <spring.boot.version>2.4.1</spring.boot.version>
+    </properties>
+
     <modules>
         <module>ethan-framework-extension</module>
+        <module>ethan-framework-core</module>
     </modules>
 
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>1.18.16</version>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>fastjson</artifactId>
+                <version>1.2.75</version>
+            </dependency>
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-api</artifactId>
+                <version>1.7.30</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-autoconfigure</artifactId>
+                <version>${spring.boot.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-configuration-processor</artifactId>
+                <version>${spring.boot.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-aop</artifactId>
+                <version>${spring.boot.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
 </project>
