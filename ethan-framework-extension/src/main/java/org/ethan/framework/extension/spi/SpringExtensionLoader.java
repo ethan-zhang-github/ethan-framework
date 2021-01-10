@@ -1,4 +1,4 @@
-package org.ethan.framework.extension.spring;
+package org.ethan.framework.extension.spi;
 
 import org.ethan.framework.extension.ExtensionRegistry;
 import org.ethan.framework.extension.annotation.Extension;

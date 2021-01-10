@@ -1,6 +1,7 @@
-package org.ethan.framework.extension.spring;
+package org.ethan.framework.extension.configuration;
 
 import org.ethan.framework.extension.*;
+import org.ethan.framework.extension.spi.SpringExtensionLoader;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
