@@ -1,6 +1,8 @@
 package org.ethan.framework.extension.demo;
 
-public interface ExtensionDemo {
+import org.ethan.framework.extension.ExtensionPoint;
+
+public interface ExtensionDemo extends ExtensionPoint {
 
     void execute(Long id);
 

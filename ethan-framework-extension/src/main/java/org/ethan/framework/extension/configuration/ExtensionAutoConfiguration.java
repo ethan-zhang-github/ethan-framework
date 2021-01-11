@@ -1,7 +1,9 @@
 package org.ethan.framework.extension.configuration;
 
 import org.ethan.framework.extension.*;
-import org.ethan.framework.extension.spi.SpringExtensionLoader;
+import org.ethan.framework.extension.spi.ApplicationContextExtensionLoader;
+import org.ethan.framework.extension.spi.ExtensionFactoriesLoader;
+import org.ethan.framework.extension.spi.ExtensionLoader;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -28,8 +30,13 @@ public class ExtensionAutoConfiguration {
     }
 
     @Bean
-    public SpringExtensionLoader springExtensionLoader() {
-        return new SpringExtensionLoader(extensionRegistry());
+    public ExtensionLoader springExtensionLoader() {
+        return new ApplicationContextExtensionLoader(extensionRegistry());
+    }
+
+    @Bean
+    public ExtensionLoader extensionFactoriesLoader() {
+        return new ExtensionFactoriesLoader(extensionRegistry());
     }
 
 }

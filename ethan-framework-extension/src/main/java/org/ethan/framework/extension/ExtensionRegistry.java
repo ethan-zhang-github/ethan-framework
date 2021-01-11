@@ -6,6 +6,6 @@ package org.ethan.framework.extension;
  */
 public interface ExtensionRegistry {
 
-    void register(Object extension);
+    void register(Object extension, Class<?>... extensionClazz);
 
 }

@@ -3,6 +3,7 @@ package org.ethan.framework.extension;
 import lombok.Getter;
 import lombok.Setter;
 import org.ethan.framework.extension.annotation.Extension;
+import org.ethan.framework.extension.exception.IllegalExtensionException;
 import org.springframework.core.annotation.AnnotationUtils;
 
 import java.util.Arrays;
@@ -22,20 +23,35 @@ public class SimpleExtensionRegistry implements ExtensionRegistry {
     }
 
     @Override
-    public void register(Object extension) {
-        Class<?> extensionClazz = extension.getClass();
-        Extension extensionAnnotation = AnnotationUtils.findAnnotation(extensionClazz, Extension.class);
+    public void register(Object extension, Class<?>... extensionClazz) {
+        Extension extensionAnnotation = AnnotationUtils.findAnnotation(extension.getClass(), Extension.class);
         if (Objects.nonNull(extensionAnnotation)) {
-            Set<Scene> scenes = collectScenes(extensionAnnotation);
-            save(scenes, extensionAnnotation.target(), extension);
+            registerWithAnnotation(extension, extensionAnnotation);
             return;
         }
         if (extension instanceof ExtensionPoint) {
-            ExtensionPoint extensionPoint = (ExtensionPoint) extension;
-            save(extensionPoint.focus(), extensionClazz.getInterfaces(), extension);
+            registerWithExtensionPoint(extension, extensionClazz);
             return;
         }
-        throw new IllegalArgumentException("extension must be annotated with @Extension or implement ExtensionPoint!");
+        throw new IllegalExtensionException(extension);
+    }
+
+    private void registerWithAnnotation(Object extension, Extension extensionAnnotation) {
+        Set<Scene> scenes = collectScenes(extensionAnnotation);
+        Class<?>[] classes = extensionAnnotation.target();
+        if (classes.length == 0) {
+            classes = new Class[]{ extension.getClass() };
+        }
+        save(scenes, classes, extension);
+    }
+
+    private void registerWithExtensionPoint(Object extension, Class<?>... extensionClazz) {
+        ExtensionPoint extensionPoint = (ExtensionPoint) extension;
+        Class<?>[] classes = extensionClazz;
+        if (Objects.isNull(classes) || classes.length == 0) {
+            classes = new Class[]{ extension.getClass() };
+        }
+        save(extensionPoint.focus(), classes, extension);
     }
 
     private Set<Scene> collectScenes(Extension extensionAnnotation) {
