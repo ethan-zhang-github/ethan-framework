@@ -1,3 +1,0 @@
-org.ethan.framework.extension.demo.ExtensionDemo:
-  - org.ethan.framework.extension.demo.FirstExtensionDemo
-  - org.ethan.framework.extension.demo.SecondExtensionDemo

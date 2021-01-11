@@ -7,9 +7,18 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="ethan-framework-core" />
+        <module name="ethan-framework-demo-start" />
         <module name="ethan-framework-extension" />
+        <module name="ethan-framework-core" />
+        <module name="ethan-framework-demo-infrastructure" />
+        <module name="ethan-framework-demo-app" />
+        <module name="ethan-framework-demo-adapter" />
+        <module name="ethan-framework-demo-domain" />
+        <module name="ethan-framework-demo-client" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="ethan-framework-demo-domain" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>

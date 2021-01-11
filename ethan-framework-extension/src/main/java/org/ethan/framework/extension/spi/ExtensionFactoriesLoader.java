@@ -17,7 +17,7 @@ import java.util.stream.Collectors;
 @Slf4j
 public class ExtensionFactoriesLoader extends AbstractExtensionLoader implements BeanClassLoaderAware {
 
-    public static final String FACTORIES_RESOURCE_LOCATION = "ethan/extension.factories";
+    public static final String FACTORIES_RESOURCE_LOCATION = "ethan/extension.properties";
 
     private ClassLoader beanClassLoader;
 
