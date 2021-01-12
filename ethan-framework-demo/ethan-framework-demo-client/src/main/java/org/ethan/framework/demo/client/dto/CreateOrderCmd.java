@@ -1,4 +1,4 @@
-package org.ethan.framework.demo.dto;
+package org.ethan.framework.demo.client.dto;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;

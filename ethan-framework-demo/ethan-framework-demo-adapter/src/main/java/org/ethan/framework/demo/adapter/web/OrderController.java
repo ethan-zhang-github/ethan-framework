@@ -1,4 +1,4 @@
-package org.ethan.framework.demo.controller;
+package org.ethan.framework.demo.adapter.web;
 
 import org.ethan.framework.demo.dto.CreateOrderCmd;
 import org.ethan.framework.demo.service.OrderService;

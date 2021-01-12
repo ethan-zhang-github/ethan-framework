@@ -55,6 +55,7 @@
         <module>ethan-framework-extension</module>
         <module>ethan-framework-core</module>
         <module>ethan-framework-demo</module>
+        <module>ethan-framework-dto</module>
     </modules>
 
     <dependencyManagement>
