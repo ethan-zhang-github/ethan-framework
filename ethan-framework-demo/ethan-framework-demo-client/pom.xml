@@ -13,6 +13,10 @@
 
     <dependencies>
         <dependency>
+            <groupId>org.ethan</groupId>
+            <artifactId>ethan-framework-dto</artifactId>
+        </dependency>
+        <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
         </dependency>

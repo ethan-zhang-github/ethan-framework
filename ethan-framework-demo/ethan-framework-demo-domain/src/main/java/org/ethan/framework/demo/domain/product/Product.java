@@ -1,4 +1,4 @@
-package org.ethan.framework.demo.dto;
+package org.ethan.framework.demo.domain.product;
 
 import lombok.Data;
 

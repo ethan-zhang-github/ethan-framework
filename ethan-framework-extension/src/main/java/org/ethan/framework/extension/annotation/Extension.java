@@ -1,7 +1,7 @@
 package org.ethan.framework.extension.annotation;
 
+import org.ethan.framework.dto.extension.Client;
 import org.ethan.framework.extension.Scene;
-import org.ethan.framework.extension.enums.Client;
 import org.springframework.stereotype.Component;
 
 import java.lang.annotation.*;

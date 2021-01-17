@@ -1,7 +1,7 @@
 package org.ethan.framework.extension;
 
 import lombok.*;
-import org.ethan.framework.extension.enums.Client;
+import org.ethan.framework.dto.extension.Client;
 
 /**
  * 业务场景标识

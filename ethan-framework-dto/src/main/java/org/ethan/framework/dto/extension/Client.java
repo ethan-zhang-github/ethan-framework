@@ -1,4 +1,4 @@
-package org.ethan.framework.extension.enums;
+package org.ethan.framework.dto.extension;
 
 /**
  * 客户端类型

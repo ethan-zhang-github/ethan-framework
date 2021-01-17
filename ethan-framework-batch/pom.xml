@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>ethan-framework-extension</artifactId>
+    <artifactId>ethan-framework-batch</artifactId>
 
     <dependencies>
         <dependency>
@@ -19,9 +19,19 @@
         </dependency>
 
         <dependency>
-            <groupId>org.ethan</groupId>
-            <artifactId>ethan-framework-dto</artifactId>
-            <version>${project.version}</version>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-batch</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-mongodb</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>easyexcel</artifactId>
+            <version>2.2.6</version>
         </dependency>
 
         <dependency>

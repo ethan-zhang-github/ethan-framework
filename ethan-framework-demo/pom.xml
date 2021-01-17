@@ -53,6 +53,16 @@
                 <artifactId>ethan-framework-demo-adapter</artifactId>
                 <version>1.0.0-SNAPSHOT</version>
             </dependency>
+            <dependency>
+                <groupId>org.ethan</groupId>
+                <artifactId>ethan-framework-dto</artifactId>
+                <version>${ethan.framework.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.ethan</groupId>
+                <artifactId>ethan-framework-extension</artifactId>
+                <version>${ethan.framework.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
