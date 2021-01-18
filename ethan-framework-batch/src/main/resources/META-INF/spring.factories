@@ -1,1 +1,3 @@
-org.springframework.boot.autoconfigure.EnableAutoConfiguration=org.ethan.framework.batch.config.BatchAutoConfiguration
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+org.ethan.framework.batch.config.BatchAutoConfiguration,\
+org.ethan.framework.batch.config.MongoClientConfiguration
