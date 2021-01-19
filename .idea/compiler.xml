@@ -16,6 +16,7 @@
         <module name="ethan-framework-demo-adapter" />
         <module name="ethan-framework-demo-domain" />
         <module name="ethan-framework-demo-client" />
+        <module name="ethan-framework-batch" />
       </profile>
     </annotationProcessing>
   </component>
