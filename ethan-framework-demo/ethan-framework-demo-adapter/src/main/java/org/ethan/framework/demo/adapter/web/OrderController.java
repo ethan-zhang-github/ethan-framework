@@ -1,7 +1,7 @@
 package org.ethan.framework.demo.adapter.web;
 
-import org.ethan.framework.demo.dto.CreateOrderCmd;
-import org.ethan.framework.demo.service.OrderService;
+import org.ethan.framework.demo.client.api.OrderService;
+import org.ethan.framework.demo.client.dto.CreateOrderCmd;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;

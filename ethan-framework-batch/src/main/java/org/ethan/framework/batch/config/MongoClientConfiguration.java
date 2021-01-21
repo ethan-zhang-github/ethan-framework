@@ -5,6 +5,7 @@ import com.mongodb.MongoCredential;
 import com.mongodb.ServerAddress;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.mongodb.config.AbstractMongoClientConfiguration;
+import org.springframework.data.mongodb.repository.config.EnableMongoRepositories;
 
 import java.util.Collections;
 
@@ -12,6 +13,7 @@ import java.util.Collections;
  * MongoDB 客户端配置
  * @author Ethan Zhang
  */
+@EnableMongoRepositories(basePackages = "org.ethan.framework.batch.mongodb.repository")
 @Configuration
 public class MongoClientConfiguration extends AbstractMongoClientConfiguration {
 
