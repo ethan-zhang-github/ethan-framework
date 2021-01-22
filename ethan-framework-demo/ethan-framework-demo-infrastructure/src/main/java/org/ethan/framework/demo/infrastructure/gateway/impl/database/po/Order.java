@@ -1,4 +1,4 @@
-package org.ethan.framework.batch.mongodb.document;
+package org.ethan.framework.demo.infrastructure.gateway.impl.database.po;
 
 import lombok.EqualsAndHashCode;
 import lombok.Getter;

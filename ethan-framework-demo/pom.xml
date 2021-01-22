@@ -63,6 +63,11 @@
                 <artifactId>ethan-framework-extension</artifactId>
                 <version>${ethan.framework.version}</version>
             </dependency>
+            <dependency>
+                <groupId>org.ethan</groupId>
+                <artifactId>ethan-framework-batch</artifactId>
+                <version>${ethan.framework.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 

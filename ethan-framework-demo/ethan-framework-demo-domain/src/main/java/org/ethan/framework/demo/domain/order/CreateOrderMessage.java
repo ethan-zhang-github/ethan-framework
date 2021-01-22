@@ -1,4 +1,4 @@
-package org.ethan.framework.batch.demo;
+package org.ethan.framework.demo.domain.order;
 
 import lombok.Data;
 
