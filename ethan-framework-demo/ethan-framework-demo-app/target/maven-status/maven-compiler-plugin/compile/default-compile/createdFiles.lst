@@ -1,0 +1,5 @@
+org\ethan\framework\demo\app\converter\CreateOrderMessageConverter.class
+org\ethan\framework\demo\app\message\CreateOrderMessage$Product.class
+org\ethan\framework\demo\app\listener\OrderRocketMQMessageListener.class
+org\ethan\framework\demo\app\message\CreateOrderMessage.class
+org\ethan\framework\demo\app\order\OrderServiceImpl.class

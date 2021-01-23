@@ -1,0 +1,11 @@
+org\ethan\framework\dto\Scope.class
+org\ethan\framework\dto\Query.class
+org\ethan\framework\dto\Command.class
+org\ethan\framework\dto\MultiResponse.class
+org\ethan\framework\dto\DTO.class
+org\ethan\framework\dto\PageQuery.class
+org\ethan\framework\dto\SingleResponse.class
+org\ethan\framework\dto\extension\Client.class
+org\ethan\framework\dto\extension\ClientCmd.class
+org\ethan\framework\dto\Response.class
+org\ethan\framework\dto\PageResponse.class

@@ -16,14 +16,17 @@
             <groupId>org.ethan</groupId>
             <artifactId>ethan-framework-demo-client</artifactId>
         </dependency>
+
         <dependency>
             <groupId>org.ethan</groupId>
             <artifactId>ethan-framework-demo-infrastructure</artifactId>
         </dependency>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter</artifactId>
         </dependency>
+
         <dependency>
             <groupId>org.ethan</groupId>
             <artifactId>ethan-framework-extension</artifactId>
