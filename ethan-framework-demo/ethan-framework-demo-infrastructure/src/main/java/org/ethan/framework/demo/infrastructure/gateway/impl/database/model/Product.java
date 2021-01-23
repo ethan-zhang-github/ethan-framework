@@ -1,4 +1,4 @@
-package org.ethan.framework.demo.infrastructure.gateway.impl.database.po;
+package org.ethan.framework.demo.infrastructure.gateway.impl.database.model;
 
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
@@ -14,8 +14,7 @@ import java.math.BigDecimal;
 @Document
 public class Product extends AbstractDocument {
 
-    @DBRef
-    private Order order;
+    private Long orderId;
 
     private String name;
 

@@ -6,7 +6,7 @@ import org.ethan.framework.batch.listener.RocketMQListenerAdaptor;
 import org.ethan.framework.demo.client.order.dto.CreateOrderMessage;
 import org.ethan.framework.demo.app.order.converter.CreateOrderMessageConverter;
 import org.ethan.framework.demo.infrastructure.gateway.impl.database.OrderRepository;
-import org.ethan.framework.demo.infrastructure.gateway.impl.database.po.Order;
+import org.ethan.framework.demo.infrastructure.gateway.impl.database.model.Order;
 import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
 import org.springframework.stereotype.Component;
 

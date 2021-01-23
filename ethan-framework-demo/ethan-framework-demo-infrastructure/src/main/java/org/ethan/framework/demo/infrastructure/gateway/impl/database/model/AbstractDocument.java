@@ -1,4 +1,4 @@
-package org.ethan.framework.demo.infrastructure.gateway.impl.database.po;
+package org.ethan.framework.demo.infrastructure.gateway.impl.database.model;
 
 import lombok.Getter;
 import lombok.Setter;

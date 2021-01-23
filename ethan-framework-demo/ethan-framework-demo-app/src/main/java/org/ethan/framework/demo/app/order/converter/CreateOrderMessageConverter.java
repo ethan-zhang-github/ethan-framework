@@ -1,8 +1,8 @@
 package org.ethan.framework.demo.app.order.converter;
 
 import org.ethan.framework.demo.client.order.dto.CreateOrderMessage;
-import org.ethan.framework.demo.infrastructure.gateway.impl.database.po.Order;
-import org.ethan.framework.demo.infrastructure.gateway.impl.database.po.Product;
+import org.ethan.framework.demo.infrastructure.gateway.impl.database.model.Order;
+import org.ethan.framework.demo.infrastructure.gateway.impl.database.model.Product;
 import org.springframework.core.convert.converter.Converter;
 
 import java.util.stream.Collectors;
