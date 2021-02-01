@@ -59,14 +59,15 @@
         <module>ethan-framework-demo</module>
         <module>ethan-framework-dto</module>
         <module>ethan-framework-batch</module>
+        <module>ethan-framework-microservices</module>
     </modules>
 
     <dependencyManagement>
         <dependencies>
             <dependency>
                 <groupId>io.projectreactor</groupId>
-                <artifactId>reactor-core</artifactId>
-                <version>3.4.1</version>
+                <artifactId>reactor-bom</artifactId>
+                <version>2020.0.3</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
