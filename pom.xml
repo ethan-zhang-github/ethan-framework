@@ -60,6 +60,7 @@
         <module>ethan-framework-dto</module>
         <module>ethan-framework-batch</module>
         <module>ethan-framework-microservices</module>
+        <module>ethan-framework-algorithm</module>
     </modules>
 
     <dependencyManagement>

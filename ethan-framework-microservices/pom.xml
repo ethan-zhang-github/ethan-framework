@@ -15,6 +15,7 @@
         <module>provider</module>
         <module>provider-api</module>
         <module>consumer</module>
+        <module>api-gateway</module>
     </modules>
 
 
