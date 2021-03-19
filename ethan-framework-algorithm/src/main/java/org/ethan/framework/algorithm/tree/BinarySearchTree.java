@@ -32,20 +32,16 @@ public class BinarySearchTree<T extends Comparable<T>> {
     }
 
     public void preOrder(Consumer<T> consumer) {
-        Stack<TreeNode<T>> stack = new Stack<>();
-        TreeNode<T> cur = root;
-        stack.push(cur);
-        while (!stack.isEmpty()) {
-            while (cur.left != null) {
-                stack.push(cur.left);
-                cur = cur.left;
-            }
-            TreeNode<T> pop = stack.pop();
-            if (pop.right != null) {
-                stack.push(pop.right);
-                cur = pop.right;
-            }
+        preOrder(root, consumer);
+    }
+
+    private void preOrder(TreeNode<T> root, Consumer<T> consumer) {
+        if (root == null) {
+            return;
         }
+        consumer.accept(root.data);
+        preOrder(root.left, consumer);
+        preOrder(root.right, consumer);
     }
 
     public void midOrder(Consumer<T> consumer) {
