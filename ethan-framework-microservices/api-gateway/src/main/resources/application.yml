@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: api-gateway
+  redis:
+    client-name: ${spring.application.name}
+    host: user-test-redis.wanshifu.com
+    port: 6379
+    password: redis@wanshifu2017.com
+    database: 3
+  cloud:
+    gateway:
+      routes:
+        - id: user-app-api
+          uri: http://test-user-app-api.wanshifu.com
+        - id: user-web-api
+          url: http://test-user-web-api.wanshifu.com
+server:
+  port: 8888
