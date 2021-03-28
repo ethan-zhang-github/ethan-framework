@@ -44,6 +44,10 @@ public class Response<T> {
         return new Response<>(null, "unauthorized", "未授权请求");
     }
 
+    public static <R> Response<R> authenticateSuccessful() {
+        return Response.success("用户登录授权成功");
+    }
+
     public static <R> Response<R> authenticateFailed() {
         return new Response<>(null, "authenticate-failed", "用户身份认证失败");
     }

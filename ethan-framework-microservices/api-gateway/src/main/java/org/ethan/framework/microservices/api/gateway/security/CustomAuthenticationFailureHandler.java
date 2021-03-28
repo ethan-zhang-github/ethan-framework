@@ -2,6 +2,7 @@ package org.ethan.framework.microservices.api.gateway.security;
 
 import com.alibaba.fastjson.JSON;
 import org.ethan.framework.microservices.api.gateway.vo.Response;
+import org.springframework.http.MediaType;
 import org.springframework.http.server.reactive.ServerHttpResponse;
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.web.server.WebFilterExchange;
@@ -12,11 +13,9 @@ public class CustomAuthenticationFailureHandler implements ServerAuthenticationF
 
     @Override
     public Mono<Void> onAuthenticationFailure(WebFilterExchange webFilterExchange, AuthenticationException exception) {
-        return Mono.fromRunnable(() -> {
-            ServerHttpResponse response = webFilterExchange.getExchange().getResponse();
-            response.writeWith(Mono.just(response.bufferFactory().wrap(JSON.toJSONBytes(Response.authenticateFailed()))));
-            response.setComplete();
-        });
+        ServerHttpResponse response = webFilterExchange.getExchange().getResponse();
+        response.getHeaders().setContentType(MediaType.APPLICATION_JSON);
+        return response.writeWith(Mono.just(response.bufferFactory().wrap(JSON.toJSONBytes(Response.authenticateFailed())))).then();
     }
 
 }

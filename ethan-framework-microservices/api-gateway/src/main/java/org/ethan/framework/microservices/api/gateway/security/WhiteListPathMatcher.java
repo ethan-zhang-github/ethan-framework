@@ -16,6 +16,7 @@ import java.util.stream.Collectors;
 
 /**
  * 基于白名单策略的匹配器
+ * @author Ethan Zhang
  */
 @Getter
 @Setter

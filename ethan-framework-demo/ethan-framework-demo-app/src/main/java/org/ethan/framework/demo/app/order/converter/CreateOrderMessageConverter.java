@@ -16,13 +16,6 @@ public enum CreateOrderMessageConverter implements Converter<CreateOrderMessage,
         Order order = new Order();
         order.setId(source.getId());
         order.setOrderNo(source.getOrderNo());
-        order.setProducts(source.getProducts().stream().map(p -> {
-            Product product = new Product();
-            product.setName(p.getName());
-            product.setPrice(p.getPrice());
-            product.setOrder(order);
-            return product;
-        }).collect(Collectors.toSet()));
         return order;
     }
 

@@ -24,25 +24,25 @@ public class RedisServerSecurityContextRepository implements ServerSecurityConte
     private static final Duration timeout = Duration.ofDays(15);
 
     @Resource
-    private ReactiveStringRedisTemplate redisTemplate;
+    private ReactiveStringRedisTemplate reactiveStringRedisTemplate;
 
     @Override
     public Mono<Void> save(ServerWebExchange exchange, SecurityContext context) {
-        return Mono.fromRunnable(() -> {
-            Object principal = context.getAuthentication().getPrincipal();
-            if (principal instanceof CustomUserDetails) {
-                CustomUserDetails customUserDetails = (CustomUserDetails) principal;
-                String token = UUID.randomUUID().toString();
-                redisTemplate.opsForValue().set(token, JSON.toJSONString(customUserDetails), timeout);
-                exchange.getResponse().addCookie(ResponseCookie.from(COOKIE_TOKEN_KEY, token).build());
-            }
-        });
+        Object principal = context.getAuthentication().getPrincipal();
+        if (principal instanceof CustomUserDetails) {
+            CustomUserDetails customUserDetails = (CustomUserDetails) principal;
+            String token = UUID.randomUUID().toString();
+            reactiveStringRedisTemplate.opsForValue().set(token, JSON.toJSONString(customUserDetails), timeout);
+            exchange.getResponse().addCookie(ResponseCookie.from(COOKIE_TOKEN_KEY, token)
+                    .domain("localhost").httpOnly(true).maxAge(timeout).path("/").build());
+        }
+        return Mono.empty();
     }
 
     @Override
     public Mono<SecurityContext> load(ServerWebExchange exchange) {
         return Mono.justOrEmpty(exchange.getRequest().getCookies().getFirst(COOKIE_TOKEN_KEY))
-                .flatMap(cookie -> redisTemplate.opsForValue().get(cookie.getValue()).map(cache -> JSON.parseObject(cache, CustomUserDetails.class))
+                .flatMap(cookie -> reactiveStringRedisTemplate.opsForValue().get(cookie.getValue()).map(cache -> JSON.parseObject(cache, CustomUserDetails.class))
                         .map(customUserDetails -> new SecurityContextImpl(new UsernamePasswordAuthenticationToken(customUserDetails,
                                 customUserDetails.getPassword(), customUserDetails.getAuthorities()))));
     }
