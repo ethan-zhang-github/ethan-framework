@@ -43,7 +43,7 @@ public class GatewaySecurityConfiguration {
                 // 身份上下文存储
                 .securityContextRepository(redisServerSecurityContextRepository())
                 // 身份认证
-                .authorizeExchange().anyExchange().authenticated()
+                .authorizeExchange().anyExchange().permitAll()
                 .and()
                 // 表单登录
                 .formLogin().loginPage(LOGIN_URL)

@@ -1,7 +1,6 @@
 package org.ethan.framework.microservices.api.gateway.security;
 
-import com.alibaba.fastjson.JSON;
-import org.springframework.data.redis.core.ReactiveStringRedisTemplate;
+import org.springframework.data.redis.core.ReactiveRedisTemplate;
 import org.springframework.http.ResponseCookie;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.context.SecurityContext;
@@ -24,7 +23,7 @@ public class RedisServerSecurityContextRepository implements ServerSecurityConte
     private static final Duration timeout = Duration.ofDays(15);
 
     @Resource
-    private ReactiveStringRedisTemplate reactiveStringRedisTemplate;
+    private ReactiveRedisTemplate<Object, Object> reactiveRedisTemplate;
 
     @Override
     public Mono<Void> save(ServerWebExchange exchange, SecurityContext context) {
@@ -32,9 +31,9 @@ public class RedisServerSecurityContextRepository implements ServerSecurityConte
         if (principal instanceof CustomUserDetails) {
             CustomUserDetails customUserDetails = (CustomUserDetails) principal;
             String token = UUID.randomUUID().toString();
-            reactiveStringRedisTemplate.opsForValue().set(token, JSON.toJSONString(customUserDetails), timeout);
             exchange.getResponse().addCookie(ResponseCookie.from(COOKIE_TOKEN_KEY, token)
                     .domain("localhost").httpOnly(true).maxAge(timeout).path("/").build());
+            return reactiveRedisTemplate.opsForValue().set(token, customUserDetails, timeout).then();
         }
         return Mono.empty();
     }
@@ -42,7 +41,7 @@ public class RedisServerSecurityContextRepository implements ServerSecurityConte
     @Override
     public Mono<SecurityContext> load(ServerWebExchange exchange) {
         return Mono.justOrEmpty(exchange.getRequest().getCookies().getFirst(COOKIE_TOKEN_KEY))
-                .flatMap(cookie -> reactiveStringRedisTemplate.opsForValue().get(cookie.getValue()).map(cache -> JSON.parseObject(cache, CustomUserDetails.class))
+                .flatMap(cookie -> reactiveRedisTemplate.opsForValue().get(cookie.getValue()).cast(CustomUserDetails.class)
                         .map(customUserDetails -> new SecurityContextImpl(new UsernamePasswordAuthenticationToken(customUserDetails,
                                 customUserDetails.getPassword(), customUserDetails.getAuthorities()))));
     }

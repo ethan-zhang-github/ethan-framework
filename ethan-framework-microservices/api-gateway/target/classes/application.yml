@@ -5,8 +5,8 @@ spring:
     client-name: ${spring.application.name}
     host: default-test-redis.wanshifu.com
     port: 6379
-    password: redis@wanshifu2017.com
-    database: 0
+    password: tRedisW135
+    database: 1
   cloud:
     gateway:
       routes:
@@ -15,6 +15,8 @@ spring:
           predicates:
             - Method=GET, POST
             - Path=/app/**
+          filters:
+            - Authorization=createOrder, deleteOrder
         - id: user-web-api
           uri: http://test-user-web-api.wanshifu.com
           predicates:
@@ -22,3 +24,8 @@ spring:
             - Path=/web/**
 server:
   port: 8888
+logging:
+  level:
+    org:
+      springframework:
+        security: DEBUG
