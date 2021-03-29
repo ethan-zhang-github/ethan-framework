@@ -37,10 +37,8 @@ public class AuthorizationGatewayFilterFactory extends AbstractGatewayFilterFact
     @Override
     public GatewayFilter apply(Config config) {
         return (exchange, chain) -> exchange.getPrincipal()
-                .filter(principal -> principal instanceof UsernamePasswordAuthenticationToken)
                 .cast(UsernamePasswordAuthenticationToken.class)
                 .map(UsernamePasswordAuthenticationToken::getPrincipal)
-                .filter(userDetails -> userDetails instanceof CustomUserDetails)
                 .cast(CustomUserDetails.class)
                 .flatMap(customUserDetails -> {
                     Set<String> userAuthorities = customUserDetails.getAuthorities().stream()
