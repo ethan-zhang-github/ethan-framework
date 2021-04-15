@@ -7,21 +7,21 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="consumer" />
+        <module name="ethan-framework-algorithm" />
+        <module name="ethan-framework-batch" />
         <module name="ethan-framework-demo-adapter" />
+        <module name="ethan-framework-extension" />
+        <module name="provider-api" />
+        <module name="ethan-framework-core" />
+        <module name="ethan-framework-dto" />
+        <module name="provider" />
         <module name="api-gateway" />
         <module name="ethan-framework-demo-start" />
-        <module name="ethan-framework-core" />
-        <module name="provider" />
-        <module name="ethan-framework-batch" />
-        <module name="ethan-framework-extension" />
-        <module name="ethan-framework-demo-app" />
         <module name="ethan-framework-demo-client" />
-        <module name="provider-api" />
-        <module name="ethan-framework-demo-domain" />
         <module name="ethan-framework-demo-infrastructure" />
-        <module name="ethan-framework-algorithm" />
-        <module name="ethan-framework-dto" />
+        <module name="ethan-framework-demo-app" />
+        <module name="ethan-framework-demo-domain" />
+        <module name="consumer" />
       </profile>
     </annotationProcessing>
   </component>

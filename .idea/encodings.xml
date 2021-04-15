@@ -2,35 +2,21 @@
 <project version="4">
   <component name="Encoding" defaultCharsetForPropertiesFiles="UTF-8">
     <file url="file://$PROJECT_DIR$/ethan-framework-algorithm/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/ethan-framework-algorithm/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ethan-framework-batch/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ethan-framework-batch/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/ethan-framework-core/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/ethan-framework-core/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ethan-framework-demo/ethan-framework-demo-adapter/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ethan-framework-demo/ethan-framework-demo-adapter/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ethan-framework-demo/ethan-framework-demo-app/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/ethan-framework-demo/ethan-framework-demo-app/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ethan-framework-demo/ethan-framework-demo-client/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/ethan-framework-demo/ethan-framework-demo-client/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ethan-framework-demo/ethan-framework-demo-domain/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/ethan-framework-demo/ethan-framework-demo-domain/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ethan-framework-demo/ethan-framework-demo-infrastructure/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ethan-framework-demo/ethan-framework-demo-infrastructure/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ethan-framework-demo/ethan-framework-demo-start/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/ethan-framework-demo/ethan-framework-demo-start/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ethan-framework-dto/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/ethan-framework-dto/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ethan-framework-extension/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ethan-framework-extension/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ethan-framework-microservices/api-gateway/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ethan-framework-microservices/api-gateway/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/ethan-framework-microservices/consumer/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/ethan-framework-microservices/consumer/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/ethan-framework-microservices/provider-api/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/ethan-framework-microservices/provider-api/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/ethan-framework-microservices/provider/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/ethan-framework-microservices/provider/src/main/resources" charset="UTF-8" />
     <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>
