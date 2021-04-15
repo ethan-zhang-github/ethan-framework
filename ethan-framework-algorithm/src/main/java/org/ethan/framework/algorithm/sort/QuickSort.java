@@ -1,5 +1,9 @@
 package org.ethan.framework.algorithm.sort;
 
+/**
+ * 快排
+ * @author Ethan Zhang
+ */
 public class QuickSort implements Sort {
 
     @Override

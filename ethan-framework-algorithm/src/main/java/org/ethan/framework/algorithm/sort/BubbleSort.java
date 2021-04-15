@@ -1,5 +1,9 @@
 package org.ethan.framework.algorithm.sort;
 
+/**
+ * 冒泡排序
+ * @author Ethan Zhang
+ */
 public class BubbleSort implements Sort {
 
     @Override

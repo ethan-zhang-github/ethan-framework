@@ -1,5 +1,9 @@
 package org.ethan.framework.algorithm.sort;
 
+/**
+ * 堆排
+ * @author Ethan Zhang
+ */
 public class HeapSort implements Sort {
 
     @Override
