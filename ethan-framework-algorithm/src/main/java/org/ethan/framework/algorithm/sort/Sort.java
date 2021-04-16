@@ -14,7 +14,7 @@ public interface Sort {
         int[] res = sort(array);
         Instant end = Instant.now();
         if (isSorted(res)) {
-            System.out.println(String.format("排序耗时：%s 毫秒", Duration.between(start, end).toMillis()));
+            System.out.printf("排序耗时：%s 毫秒%n", Duration.between(start, end).toMillis());
         } else {
             System.out.println("排序失败");
         }
