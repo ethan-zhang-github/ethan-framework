@@ -1,7 +1,7 @@
 package org.ethan.framework.algorithm.solution;
 
 /**
- * 最长回文子串
+ * 最长回文子序列
  * @author Ethan Zhang
  */
 public class LongestPalindromeSubSeq {
@@ -24,7 +24,7 @@ public class LongestPalindromeSubSeq {
 
     public static void main(String[] args) {
         LongestPalindromeSubSeq solution = new LongestPalindromeSubSeq();
-        System.out.println(solution.invoke("bbbab"));
+        System.out.println(solution.invoke("asgaarrawga"));
     }
 
 }
