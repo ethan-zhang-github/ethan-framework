@@ -24,7 +24,7 @@ public class LongestPalindromeSubSeq {
 
     public static void main(String[] args) {
         LongestPalindromeSubSeq solution = new LongestPalindromeSubSeq();
-        System.out.println(solution.invoke("asgaarrawga"));
+        System.out.println(solution.invoke("bbbab"));
     }
 
 }

@@ -2,6 +2,7 @@ package org.ethan.framework.algorithm.sort;
 
 import java.time.Duration;
 import java.time.Instant;
+import java.util.Arrays;
 import java.util.Random;
 import java.util.stream.IntStream;
 
@@ -18,6 +19,7 @@ public interface Sort {
         } else {
             System.out.println("排序失败");
         }
+        System.out.println("排序结果：" + Arrays.toString(res));
     }
 
     default boolean isSorted(int[] array) {
